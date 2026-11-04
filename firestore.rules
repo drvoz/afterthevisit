@@ -1,0 +1,10 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // PROTOTYPE ONLY: open to anyone with the web config, auto-expires.
+    // Fictional data only. Replace with authenticated, per-patient rules before any real use.
+    match /carePlans/{planId} {
+      allow read, write: if request.time < timestamp.date(2027, 1, 31);
+    }
+  }
+}

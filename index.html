@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>My Clear Care Plan · Solvera Health (Prototype)</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="sim-banner" role="note">
+    PROTOTYPE · SIMULATION ONLY · Use fictional information. Do not enter real patient data.
+  </div>
+
+  <header class="topbar">
+    <div class="brand">
+      <!-- Swap this wordmark for the official Solvera logo file (assets/solvera-logo.svg) -->
+      <div class="wordmark"><span>SOLVERA</span><span>HEALTH</span></div>
+      <div class="brand-sub">After the Visit · <em>My Clear Care Plan</em></div>
+    </div>
+    <nav class="tabs" role="tablist">
+      <button class="tab active" data-tab="patient" role="tab">Patient app</button>
+      <button class="tab" data-tab="careteam" role="tab">Care team view</button>
+      <button class="tab" data-tab="setup" role="tab">Data &amp; setup</button>
+    </nav>
+    <div class="store-pill" id="storePill" title="Where data is saved">Local</div>
+  </header>
+
+  <main>
+    <!-- PATIENT APP -->
+    <section id="tab-patient" class="tabpanel active">
+      <div class="patient-layout">
+        <div class="phone">
+          <div class="phone-notch"></div>
+          <div class="phone-screen" id="phoneScreen"></div>
+        </div>
+        <aside class="notes" id="designNotes"></aside>
+      </div>
+    </section>
+
+    <!-- CARE TEAM -->
+    <section id="tab-careteam" class="tabpanel">
+      <div id="careTeam"></div>
+    </section>
+
+    <!-- SETUP -->
+    <section id="tab-setup" class="tabpanel">
+      <div id="setup"></div>
+    </section>
+  </main>
+
+  <footer class="footbar">
+    SOLVERA HEALTHCARE CENTER, INC. <span>/</span> PEORIA <span>/</span> GALESBURG <span>/</span> Prototype for user-centered design review
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
